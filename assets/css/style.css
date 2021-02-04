@@ -12,16 +12,16 @@
 
 @font-face {
     font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../Roboto-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
+  font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../Roboto-Regular.woff") format("woff");
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
@@ -132,7 +132,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
 }
 
 .container {
@@ -164,6 +163,10 @@ body {
 .second-dataset {
     color: #ef2a82;
     stroke-width: 7;
+}
+
+.main-description--white .main-description__header {
+    color: #fff;
 }
 
 .main-description__header {
@@ -480,6 +483,10 @@ body {
     line-height: 150%;
 }
 
+.charts {
+    padding-bottom: 200px;
+}
+
 .charts__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -530,6 +537,10 @@ body {
     justify-content: space-between;
 }
 
+.charts__content-body {
+    width: 100%;
+}
+
 .charts__dataset-item + .charts__dataset-item {
     margin-top: 38px;
 }
@@ -537,6 +548,229 @@ body {
 .charts__data {
     font-size: 40px;
     line-height: 130%;
+}
+
+.date {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(25px, 1fr));
+    grid-gap: 10px;
+}
+
+.date div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    color: #262622;
+    font-size: 12px;
+}
+
+.date .active,
+.date .active--blue {
+    color: #fff;
+}
+
+.date .active {
+    background-color: #ef2a82;
+}
+
+.date .active--blue {
+    background-color: #0088f0;
+}
+
+.date .day {
+    line-height: 140%;
+    color: #8794ba;
+}
+
+.tariff {
+    position: relative;
+    margin-top: 82px;
+    padding: 320px 0 160px;
+    background-color: #172755;
+    overflow: hidden;
+}
+
+.tariff::before {
+    content: '';
+    position: absolute;
+    top: -10vh;
+    left: -10px;
+    width: 120%;
+    height: 15vh;
+    background-color: #f8f9ff;
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    border-bottom: 20px solid #ef2a82;
+}
+
+.tariff::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1000px;
+    height: 1500px;
+    background: url(../img/Decor/Subtract3.svg) center no-repeat;
+}
+
+.tariff__body {
+    position: relative;
+    z-index: 1;
+}
+
+.tariff__description {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.tariff__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.tariff__item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 340px;
+    flex: 1 1 340px;
+}
+
+.tariff__item + .tariff__item {
+    margin-left: 80px;
+}
+
+.card-price {
+    padding: 30px 60px;
+    width: 340px;
+    height: 440px;
+    color: #fff;
+    background-color: #0f1f4b;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card-price--white {
+    background-color: #fff;
+    color: #172755;
+}
+
+.card-price--white .card-price__discription {
+    border-bottom: 1px solid  #d3d9e9;
+}
+
+.card-price__category {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.card-price__discription {
+    text-align: center;
+    width: 100%;
+    font-style: 18px;
+    color: #8794ba;
+    padding-bottom: 37px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #2a407c;
+}
+
+.card-price__cost {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.card-price__cost::before {
+    content: '$';
+    font-size: 30px;
+}
+
+.card-price__duration {
+    margin-bottom: 40px;
+    color: #8794ba;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer__body {
+    padding: 69px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: 1px solid #2a407c;
+}
+
+.footer__social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer__social-item + .footer__social-item {
+    margin-left: 40px;
+}
+
+.footer .fb {
+    display: block;
+    width: 10px;
+    height: 20px;
+    background: url(../img/Icon/Facebook.svg);
+}
+
+.footer .tw {
+    display: block;
+    width: 24px;
+    height: 20px;
+    background: url(../img/Icon/Twitter.svg);
+}
+
+.footer .inst {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/Icon/Instagram.svg);
 }
 
 .hero--decor {

@@ -16314,10 +16314,12 @@ var myBar = new Chart(ctxBar, {
     datasets: [{
       label: '1',
       data: [15, 10, 16, 6, 8, 12],
+      backgroundColor: "#ef2a82"
     },
     {
       label: '2',
       data: [13, 15, 18, 15, 12, 9],
+      backgroundColor: "#0088f0"
     }]
   },
   options: {
@@ -16325,11 +16327,18 @@ var myBar = new Chart(ctxBar, {
       display: false
     },
     scales: {
-      yAxes: {
-        gridLine: {
+      xAxes: [{
+        ticks: {
+          display: false,
+        },
+        gridLines: {
+        }
+      }],
+      yAxes: [{
+        gridLines: {
           display: false
         }
-      }
+      }]
     }
   }
 });
