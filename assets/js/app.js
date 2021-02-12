@@ -16207,9 +16207,9 @@ var myChart = new Chart(ctx, {
       // gridLine: { circular: true }
     },
     responsive: true,
-    responsiveAnimationDuration: 0,
-    maintainAspectRatio: true,
-    AspectRatio: 2,
+    // responsiveAnimationDuration: 0,
+    // maintainAspectRatio: true,
+    // AspectRatio: 2,
     layout: {
       padding: {
         left: 0,
@@ -16237,66 +16237,66 @@ var myChart = new Chart(ctx, {
       easing: 'linear'
     },
     tooltips: {
-      enabled: true,
-      mode: 'index',
-      position: 'nearest',
-      titleFontSize: 20,
-      titleFontColor: 'green',
-      titleAlign: 'right',
-      titleSpacing: 2,
-      titleMarginBottom: 6,
-      bodyFontSize: 30,
-      bodyFontColor: 'red',
-      bodyFontAlign: 'center',
-      footerFontSize: 30,
-      yPadding: 10,
-      xPadding: 10,
-      caretPadding: 2,
-      caretSize: 5,
-      cornerRadius: 6,
-      multiKeyBackground: '#fff',
-      displayColors: true,
-      borderColor: 'blue',
-      borderWidth: 2
+      // enabled: true,
+      mode: 'nearest',
+      intersect: false
+      // titleFontSize: 20,
+      // titleFontColor: 'green',
+      // titleAlign: 'right',
+      // titleSpacing: 2,
+      // titleMarginBottom: 6,
+      // bodyFontSize: 30,
+      // bodyFontColor: 'red',
+      // bodyFontAlign: 'center',
+      // footerFontSize: 30,
+      // yPadding: 10,
+      // xPadding: 10,
+      // caretPadding: 2,
+      // caretSize: 5,
+      // cornerRadius: 6,
+      // multiKeyBackground: '#fff',
+      // displayColors: true,
+      // borderColor: 'blue',
+      // borderWidth: 2
 
     },
     elements: {
       point: {
-        radius: 0,
-        pointStyle: 'circle',
-        rotation: 0,
-        backgroundColor: 'red',
-        borderWidth: 1,
-        hitRadius: 1,
-        hoverRadius: 10,
-      },
-      line: {
-        tension: 0.0,
-        borderCapStyle: 'round',
-        borderWidht: 2,
-        // borderColor: 'red',
-        // borderDash: [100, 20],
-        // borderDashOffset: 0.0,
-        // borderJoinStyle: 'miter',
-        // capBezierPoints: false,
-        // stepped: true,
-        fill: true,
-      },
-      rectangle: {
-        borderWidth: 5,
-        borderColor: 'green',
-        // backgroundColor: 'green'
-        borderSkipped: 'top'
-      },
-      arc: {
-        borderColor: 'green',
-        borderWidth: 10,
+        // radius: 0,
+        // pointStyle: 'circle',
+        // rotation: 0,
+        // backgroundColor: 'red',
+        // borderWidth: 1,
+        // hitRadius: 1,
+        hoverRadius: 6,
       }
+      // line: {
+      //   tension: 0.0,
+      //   borderCapStyle: 'round',
+      //   borderWidht: 2,
+      //   // borderColor: 'red',
+      //   // borderDash: [100, 20],
+      //   // borderDashOffset: 0.0,
+      //   // borderJoinStyle: 'miter',
+      //   // capBezierPoints: false,
+      //   // stepped: true,
+      //   fill: true,
+      // },
+      // rectangle: {
+      //   borderWidth: 5,
+      //   borderColor: 'green',
+      //   // backgroundColor: 'green'
+      //   borderSkipped: 'top'
+      // },
+      // arc: {
+      //   borderColor: 'green',
+      //   borderWidth: 10,
+      // }
     },
     hover: {
-      mode: 'point',
-      intersect: true,
-      axis: 'x',
+      mode: 'nearest',
+      intersect: false,
+      // axis: 'x',
       animationDuration: 400
     },
     title: {
