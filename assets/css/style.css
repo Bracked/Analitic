@@ -12,16 +12,16 @@
 
 @font-face {
     font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../Roboto-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
+  font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../Roboto-Regular.woff") format("woff");
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
@@ -1188,7 +1188,7 @@ body {
 
 @media (max-width: 576px) {
     .hero {
-        height: 75vh;
+        height: 100vh;
     }
 
     .hero__header {
