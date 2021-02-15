@@ -16363,6 +16363,67 @@ var myBar = new Chart(ctxBar, {
 //   stagger: 0.4
 // })
 
+let feature = document.querySelector("#feature");
+let radarAnimation = document.querySelector("#radar-animation");
+let barAnimation = document.querySelector("#bar-animation");
+let calendarAnimation = document.querySelector("#calendar-animation");
+
+
+
+window.addEventListener("scroll", () => {
+  var windo = window.pageYOffset;
+  if ((feature.offsetTop - 300) <= windo) {
+    gsap.to(".feature__item", {
+      opacity: 1,
+      y: 0,
+      stagger: .5
+    })
+
+  }
+})
+
+window.addEventListener("scroll", () => {
+  var windo = window.pageYOffset;
+  if ((radarAnimation.offsetTop - 400) <= windo) {
+    let radarTimeLine = gsap.timeline();
+    radarTimeLine.to("#radar-animation .charts__description", {
+      opacity: 1,
+      x: 0
+    });
+    radarTimeLine.to("#radar-animation .charts__content", {
+      opacity: 1,
+      x: 0
+    });
+
+  }
+})
+
+window.addEventListener("scroll", () => {
+  var windo = window.pageYOffset;
+  if ((barAnimation.offsetTop - 400) <= windo) {
+    let barTimeLine = gsap.timeline();
+    barTimeLine.to("#bar-animation .charts__content", {
+      opacity: 1,
+      x: 0
+    });
+    barTimeLine.to("#bar-animation .charts__description", {
+      opacity: 1,
+      x: 0
+    });
+  }
+})
+
+window.addEventListener("scroll", () => {
+  var windo = window.pageYOffset;
+  if ((calendarAnimation.offsetTop - 400) <= windo) {
+    gsap.to("#calendar-animation", {
+      opacity: 1,
+      y: 0
+    })
+  }
+})
+
+
 
 
 // tl.from(".loader", {
