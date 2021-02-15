@@ -16431,6 +16431,7 @@ window.addEventListener("scroll", () => {
 //   duration: 1
 // }, "+=1");
 let mask = document.querySelector('.loader');
+let loaderWrapper = document.querySelector('.loader-wrapper');
 let tl = gsap.timeline();
 let body = document.body;
 
@@ -16442,5 +16443,8 @@ window.addEventListener('load', () => {
     delay: 1,
     duration: 1
   });
+  setTimeout(() => {
+    loaderWrapper.style.display = "none";
+  }, 1000);
 
 });

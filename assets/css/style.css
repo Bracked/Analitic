@@ -12,16 +12,16 @@
 
 @font-face {
     font-family: "Roboto";
-  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../Roboto-Regular.woff") format("woff");
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../Roboto-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
+  font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
@@ -305,9 +305,11 @@ body {
     margin-right: 40px;
 }
 
-.header__sign-in:hover,
-.header__sign-in:focus {
+.header__sign-in:hover {
     color: #fff;
+}
+
+.header__sign-in:focus {
     outline: 2px solid #ef2a82;
 }
 
@@ -1336,7 +1338,7 @@ body {
 
     .tariff {
         margin-top: 42px;
-        padding: 120px 0;
+        padding: 120px 0 160px;
     }
 
     .tariff__item {
