@@ -16445,6 +16445,6 @@ window.addEventListener('load', () => {
   });
   setTimeout(() => {
     loaderWrapper.style.display = "none";
-  }, 1000);
+  }, 2000);
 
 });
